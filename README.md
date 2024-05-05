@@ -1,6 +1,6 @@
 # Shell Script Repository
 
-This repository contains useful shell scripts.
+This repository contains useful shell scripts for various tasks.
 
 ## Scripts
 
@@ -16,3 +16,8 @@ This script is used to create a React JSX component. It takes three arguments:
 
 ```bash
 bash createComponent.sh <DIRECTORY_PATH> <COMPONENT_NAME> [OPTION]
+```
+#### Example
+```bash
+bash createComponent.sh . Home -s
+```
