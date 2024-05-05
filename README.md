@@ -4,7 +4,7 @@ This repository contains useful shell scripts for various tasks.
 
 ## Scripts
 
-### createComponent.sh
+### create_jsx_component.sh
 
 This script is used to create a React JSX component. It takes three arguments:
 
@@ -15,9 +15,24 @@ This script is used to create a React JSX component. It takes three arguments:
 #### Usage
 
 ```bash
-bash createComponent.sh <DIRECTORY_PATH> <COMPONENT_NAME> [OPTION]
+bash create_jsx_component.sh <DIRECTORY_PATH> <COMPONENT_NAME> [OPTION]
 ```
 #### Example
-```bash
-bash createComponent.sh . Home -s
-```
+
+  1. Creating Home.jsx component at the current location inside a new subdirectory 'Home' :
+       
+   ```bash
+   bash create_jsx_component.sh . Home -s
+   ```
+ 
+   This will create a ```Home.jsx``` file in a new Home directory at the current location.
+
+  2. Creating Home.jsx component at the different location without creating a subdirectory :
+
+  ```bash
+  bash create_jsx_component.sh ../pages/ Home
+  ```
+
+  This will create a ```Home.jsx``` file inside the pages/ directory without creating a new directory for ```Home.jsx```.
+    
+    
