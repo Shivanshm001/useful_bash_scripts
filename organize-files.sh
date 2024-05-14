@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-#Colour constants 
+#Colour constants
 txtred=$(tput setaf 1) # Red
 txtgrn=$(tput setaf 2) # Green
 txtylw=$(tput setaf 3) # Yellow
@@ -10,7 +9,6 @@ txtpur=$(tput setaf 5) # Purple
 txtcyn=$(tput setaf 6) # Cyan
 txtwht=$(tput setaf 7) # White
 txtrst=$(tput sgr0)    # Text reset
-
 
 # Function to organize files
 organize_files() {
@@ -30,13 +28,6 @@ organize_files() {
     done
 }
 
-# Function to list files
-list_files() {
-    dir_path=$1
-    echo "Items in directory '$dir_path' :"
-    ls "$dir_path"
-}
-
 # Get the directory from the user
 dir_path=$1
 
@@ -46,17 +37,4 @@ if [ ! -d "$dir_path" ]; then
     exit 1
 fi
 
-# Get the operation from the user
-echo "Enter 'list' to list the files or 'organize' to organize the files:"
-read operation
-
-# Perform the operation
-if [ "$operation" == "list" ]; then
-    list_files "$dir_path"
-elif [ "$operation" == "organize" ]; then
-    organize_files "$dir_path"
-    list_files "$dir_path"
-else
-    echo "Invalid operation."
-    exit 1
-fi
+organize_files "$dir_path"
